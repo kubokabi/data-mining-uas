@@ -1,17 +1,17 @@
-Berikut adalah **README.md** yang sudah diformat agar bisa langsung diunggah ke **GitHub**, mencakup **kode, penjelasan, dan output** dalam satu kesatuan. 🚀  
+1. Perhitungan K-Nearest Neighbors (KNN) dengan Python
 
 ---
 
 ```markdown
 # 🧠 Perhitungan K-Nearest Neighbors (KNN) dengan Python
 
-Repositori ini berisi implementasi algoritma **K-Nearest Neighbors (KNN)** menggunakan dataset **Gizi**, dengan data yang sudah dikonversi ke dalam format numerik.
+Repositori ini berisi implementasi algoritma **K-Nearest Neighbors (KNN)** menggunakan dataset **COVID-19**, dengan data yang sudah dikonversi ke dalam format numerik.
 
 ---
 
 ## 📖 Deskripsi Proyek
 
-Pada proyek ini, kita akan menggunakan **KNN** untuk mengklasifikasikan dataset **Gizi** berdasarkan fitur yang telah dikonversi ke dalam bentuk numerik. Tahapan utama dalam proyek ini meliputi:
+Pada proyek ini, kita akan menggunakan **KNN** untuk mengklasifikasikan dataset **COVID-19** berdasarkan fitur yang telah dikonversi ke dalam bentuk numerik. Tahapan utama dalam proyek ini meliputi:
 
 1. **Mengimpor library yang diperlukan**.
 2. **Membaca dataset dan melakukan eksplorasi awal**.
@@ -44,6 +44,13 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn import metrics
 ```
 
+📌 **Penjelasan:**
+- `pandas` → Untuk membaca dan mengelola dataset.
+- `numpy` → Untuk operasi perhitungan numerik.
+- `train_test_split` → Untuk membagi dataset menjadi data latih dan uji.
+- `KNeighborsClassifier` → Untuk membangun model **KNN**.
+- `metrics` → Untuk evaluasi model.
+
 ---
 
 ## 📊 2. Membaca Dataset CSV
@@ -56,7 +63,12 @@ df = pd.read_csv('/content/drive/MyDrive/Dataset/gizi.csv')
 print(df.head())
 ```
 
-### **Output:**
+📌 **Penjelasan:**
+- Dataset dibaca menggunakan `pd.read_csv()`.
+- Jika dataset tidak ada di folder proyek, pastikan jalur lengkapnya ditentukan, misalnya: `"D:/data/gizi.csv"`.
+- `df.head()` digunakan untuk melihat **5 data pertama**.
+
+### **Output Contoh Dataset:**
 ```
    Tinggi  Berat  L Perut  L Panggul  Lemak  Label
 0   160.0     70    78.0       99.0   33.3      3
@@ -82,25 +94,9 @@ print(X.head())
 print(y.head())
 ```
 
-### **Output X:**
-```
-   Tinggi  Berat  L Perut  L Panggul  Lemak
-0   160.0     70    78.0       99.0   33.3
-1   162.0     56    74.0       90.0   31.7
-2   155.0     63    76.5       95.5   37.8
-3   156.0     54    74.0       88.0   31.0
-4   155.0     55    79.0       88.0   27.0
-```
-
-### **Output y:**
-```
-0    3
-1    3
-2    3
-3    2
-4    3
-Name: Label, dtype: int64
-```
+📌 **Penjelasan:**
+- `X` berisi fitur predictor: **Tinggi, Berat, L Perut, L Panggul, dan Lemak**.
+- `y` berisi target klasifikasi: **Label**.
 
 ---
 
@@ -115,11 +111,9 @@ print(f"Jumlah data training: {X_train.shape[0]}")
 print(f"Jumlah data testing: {X_test.shape[0]}")
 ```
 
-### **Output:**
-```
-Jumlah data training: 8
-Jumlah data testing: 4
-```
+📌 **Penjelasan:**
+- `test_size=0.3` → 30% data digunakan sebagai data uji.
+- `random_state=1` → Agar pembagian dataset tetap konsisten setiap kali dijalankan.
 
 ---
 
@@ -150,10 +144,8 @@ y_pred = model.predict(X_test)
 print(y_pred)
 ```
 
-### **Output (Prediksi Label untuk Data Uji):**
-```
-[3 3 2 3]
-```
+📌 **Penjelasan:**
+- Model melakukan prediksi terhadap **data uji (30% dataset yang dipisahkan sebelumnya).**
 
 ---
 
@@ -167,12 +159,8 @@ hasil_prediksi = model.predict(data_baru)
 print(f"Hasil Prediksi Data Baru: {hasil_prediksi}")
 ```
 
-### **Output:**
-```
-Hasil Prediksi Data Baru: [2]
-```
-
-📌 **Artinya:** Model memprediksi bahwa data tersebut masuk dalam kategori **Label 2**.
+📌 **Hasil Prediksi:** `[2]`  
+Artinya, **model memprediksi bahwa data tersebut masuk dalam kategori Label 2**.
 
 ---
 
@@ -185,7 +173,8 @@ akurasi = metrics.accuracy_score(y_test, y_pred)
 print(f"Accuracy: {akurasi:.2f}")
 ```
 
-### **Output:**
+📌 **Hasil:**
 ```
 Accuracy: 1.00
 ```
+
