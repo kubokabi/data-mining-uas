@@ -1,4 +1,4 @@
-1. Perhitungan K-Nearest Neighbors (KNN) dengan Python (Pertemuan 8)
+<span style="color:red">1. Perhitungan K-Nearest Neighbors (KNN) dengan Python (Pertemuan 8)</span>
 
 ---
 
@@ -178,8 +178,8 @@ print(f"Accuracy: {akurasi:.2f}")
 Accuracy: 1.00
 ```
 
-2. Decision Tree (Pertemuan 9)
-Berikut adalah **README.md** yang telah diperbarui sesuai dengan semua gambar yang telah kamu unggah. File ini siap untuk digunakan di **GitHub** dan mencakup semua langkah, penjelasan, serta kode yang dapat langsung dijalankan. 🚀  
+<span style="color:red">2. Decision Tree (Pertemuan 9)</span>
+
 
 ---
 
@@ -419,7 +419,7 @@ print(f"Akurasi Model Golf: {acc_golf:.2f}")
 
 ---
 
-3. Perhitungan Python Naïve Bayes Classifier
+<span style="color:red">3. Perhitungan Python Naïve Bayes Classifier</span>
 
 ---
 
@@ -592,7 +592,7 @@ Accuracy: 0.75
 ## 📌 Referensi
 - [Scikit-learn Naïve Bayes Documentation](https://scikit-learn.org/stable/modules/naive_bayes.html)
 
-4. Perhitungan Python K-Means
+<span style="color:red">4. Perhitungan Python K-Means</span>
 
 ---
 
@@ -810,7 +810,7 @@ plt.show()
 ## 📌 Referensi
 - [Scikit-learn K-Means Documentation](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
 
-5. Perhitungan Python Apriory
+<span style="color:red">5. Perhitungan Python Apriory</span>
 
 ---
 
