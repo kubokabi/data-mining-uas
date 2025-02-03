@@ -1,4 +1,4 @@
-<span style="color:red">1. Perhitungan K-Nearest Neighbors (KNN) dengan Python (Pertemuan 8)</span>
+### 1. Perhitungan K-Nearest Neighbors (KNN) dengan Python (Pertemuan 8)
 
 ---
 
@@ -9,7 +9,7 @@ Repositori ini berisi implementasi algoritma **K-Nearest Neighbors (KNN)** mengg
 
 ---
 
-## 📖 Deskripsi Proyek
+ 📖 Deskripsi Proyek
 
 Pada proyek ini, kita akan menggunakan **KNN** untuk mengklasifikasikan dataset **COVID-19** berdasarkan fitur yang telah dikonversi ke dalam bentuk numerik. Tahapan utama dalam proyek ini meliputi:
 
@@ -23,7 +23,7 @@ Pada proyek ini, kita akan menggunakan **KNN** untuk mengklasifikasikan dataset 
 
 ---
 
-## 🚀 Instalasi
+ 🚀 Instalasi
 
 Sebelum menjalankan kode, pastikan pustaka yang dibutuhkan telah terinstal dengan menjalankan perintah berikut:
 
@@ -33,7 +33,7 @@ pip install pandas numpy scikit-learn
 
 ---
 
-## 📂 1. Import Library
+ 📂 1. Import Library
 
 ```python
 # Import library yang dibutuhkan
@@ -53,7 +53,7 @@ from sklearn import metrics
 
 ---
 
-## 📊 2. Membaca Dataset CSV
+ 📊 2. Membaca Dataset CSV
 
 ```python
 # Membaca dataset dari file CSV
@@ -68,7 +68,7 @@ print(df.head())
 - Jika dataset tidak ada di folder proyek, pastikan jalur lengkapnya ditentukan, misalnya: `"D:/data/gizi.csv"`.
 - `df.head()` digunakan untuk melihat **5 data pertama**.
 
-### **Output Contoh Dataset:**
+# **Output Contoh Dataset:**
 ```
    Tinggi  Berat  L Perut  L Panggul  Lemak  Label
 0   160.0     70    78.0       99.0   33.3      3
@@ -80,7 +80,7 @@ print(df.head())
 
 ---
 
-## 📌 3. Menentukan Fitur Predictor (`X`) dan Target (`y`)
+ 📌 3. Menentukan Fitur Predictor (`X`) dan Target (`y`)
 
 ```python
 # Menentukan variabel X (fitur) dan y (label target)
@@ -100,7 +100,7 @@ print(y.head())
 
 ---
 
-## 🏗️ 4. Membagi Data: Train-Test Split
+ 🏗️ 4. Membagi Data: Train-Test Split
 
 ```python
 # Membagi dataset menjadi training (70%) dan testing (30%)
@@ -117,7 +117,7 @@ print(f"Jumlah data testing: {X_test.shape[0]}")
 
 ---
 
-## 🤖 5. Membangun Model KNN
+ 🤖 5. Membangun Model KNN
 
 ```python
 # Membuat model KNN dengan K=3 dan Euclidean Distance
@@ -134,7 +134,7 @@ model.fit(X_train, y_train)
 
 ---
 
-## 🔮 6. Prediksi Data Testing
+ 🔮 6. Prediksi Data Testing
 
 ```python
 # Melakukan prediksi pada data testing
@@ -149,7 +149,7 @@ print(y_pred)
 
 ---
 
-## 🎯 7. Pengujian Model dengan Data Baru
+ 🎯 7. Pengujian Model dengan Data Baru
 
 ```python
 # Memprediksi data baru
@@ -164,7 +164,7 @@ Artinya, **model memprediksi bahwa data tersebut masuk dalam kategori Label 2**.
 
 ---
 
-## 📊 8. Evaluasi Model
+ 📊 8. Evaluasi Model
 
 ```python
 # Menghitung akurasi model
@@ -178,7 +178,7 @@ print(f"Accuracy: {akurasi:.2f}")
 Accuracy: 1.00
 ```
 
-<span style="color:red">2. Decision Tree (Pertemuan 9)</span>
+### 2. Decision Tree (Pertemuan 9)
 
 
 ---
@@ -190,7 +190,7 @@ Repositori ini berisi implementasi **Decision Tree** untuk klasifikasi menggunak
 
 ---
 
-## 📖 Deskripsi Proyek
+ 📖 Deskripsi Proyek
 
 Dalam proyek ini, kita akan membahas dan mengimplementasikan **Decision Tree** untuk **binary classification** dan **multiclass classification**.  
 Tahapan utama dalam proyek ini meliputi:
@@ -204,14 +204,14 @@ Tahapan utama dalam proyek ini meliputi:
 
 ---
 
-## 📌 1. Klasifikasi Data
+ 📌 1. Klasifikasi Data
 
-### 🟥 Binary Classification
+# 🟥 Binary Classification
 - Klasifikasi **biner** membagi data menjadi **dua kelas**.
 - Contohnya adalah **klasifikasi email spam atau bukan spam**.
 - **Contoh lain:** Membedakan **buah apel vs pisang** berdasarkan fitur seperti warna dan bentuk.
 
-### 🟦 Multiclass Classification
+# 🟦 Multiclass Classification
 - Klasifikasi **banyak kelas** membagi data menjadi **lebih dari dua kategori**.
 - **Contoh:** Dataset **Iris** yang mengklasifikasikan tiga spesies bunga **(Setosa, Versicolor, Virginica)** berdasarkan panjang dan lebar sepal serta petal.
 
@@ -225,7 +225,7 @@ from sklearn import metrics
 
 ---
 
-## 📊 2. Dataset Iris
+ 📊 2. Dataset Iris
 
 Dataset **Iris** terdiri dari **4 fitur** utama:
 - **SepalLengthCm** → Panjang sepal
@@ -234,7 +234,7 @@ Dataset **Iris** terdiri dari **4 fitur** utama:
 - **PetalWidthCm** → Lebar petal
 - **Species** → Label klasifikasi (Setosa, Versicolor, Virginica)
 
-### 🔹 Membaca Dataset
+# 🔹 Membaca Dataset
 
 ```python
 # Membaca file iris.csv
@@ -244,7 +244,7 @@ iris = pd.read_csv("Iris.csv")
 print(iris.head())
 ```
 
-### **Output Contoh Dataset**
+# **Output Contoh Dataset**
 ```
    Id  SepalLengthCm  SepalWidthCm  PetalLengthCm  PetalWidthCm      Species
 0   1           5.1          3.5          1.4          0.2  Iris-setosa
@@ -256,16 +256,16 @@ print(iris.head())
 
 ---
 
-## 🏗️ 3. Preprocessing Data
+ 🏗️ 3. Preprocessing Data
 
-### 🔹 Menghapus Kolom yang Tidak Diperlukan
+# 🔹 Menghapus Kolom yang Tidak Diperlukan
 
 ```python
 # Menghapus kolom 'Id' karena tidak relevan
 iris.drop('Id', axis=1, inplace=True)
 ```
 
-### 🔹 Memisahkan Fitur dan Label
+# 🔹 Memisahkan Fitur dan Label
 
 ```python
 # Memisahkan atribut (X) dan label (y)
@@ -273,7 +273,7 @@ X = iris[['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']]
 y = iris['Species']
 ```
 
-### 🔹 Membagi Data Menjadi Training dan Testing
+# 🔹 Membagi Data Menjadi Training dan Testing
 
 ```python
 # Membagi dataset menjadi data latih dan data uji (90% latih, 10% uji)
@@ -282,7 +282,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_
 
 ---
 
-## 🌳 4. Membuat Model Decision Tree
+ 🌳 4. Membuat Model Decision Tree
 
 ```python
 from sklearn.tree import DecisionTreeClassifier
@@ -296,16 +296,16 @@ tree_model.fit(X_train, y_train)
 
 ---
 
-## 🎯 5. Prediksi dan Evaluasi Model
+ 🎯 5. Prediksi dan Evaluasi Model
 
-### 🔹 Memprediksi Data Uji
+# 🔹 Memprediksi Data Uji
 
 ```python
 # Melakukan prediksi pada data uji
 y_pred = tree_model.predict(X_test)
 ```
 
-### 🔹 Menghitung Akurasi Model
+# 🔹 Menghitung Akurasi Model
 
 ```python
 from sklearn.metrics import accuracy_score
@@ -325,7 +325,7 @@ Accuracy: 0.97
 
 ---
 
-## 🔮 6. Memprediksi Data Baru
+ 🔮 6. Memprediksi Data Baru
 
 ```python
 # Prediksi spesies bunga iris baru
@@ -342,7 +342,7 @@ Prediksi Spesies: Iris-virginica
 
 ---
 
-## 📊 7. Visualisasi Decision Tree
+ 📊 7. Visualisasi Decision Tree
 
 ```python
 from sklearn.tree import export_graphviz
@@ -363,11 +363,11 @@ export_graphviz(
 
 ---
 
-## 🌦️ 8. Contoh Lain: Decision Tree untuk Prediksi Golf
+ 🌦️ 8. Contoh Lain: Decision Tree untuk Prediksi Golf
 
 Dataset cuaca digunakan untuk memprediksi apakah seseorang akan bermain golf berdasarkan kondisi cuaca.
 
-### 🔹 Contoh Data
+# 🔹 Contoh Data
 
 | Outlook  | Temperature | Humidity | Windy | Play Golf |
 |----------|------------|----------|-------|-----------|
@@ -377,7 +377,7 @@ Dataset cuaca digunakan untuk memprediksi apakah seseorang akan bermain golf ber
 | Sunny    | Mild       | High     | False | Yes       |
 | Sunny    | Cold       | Normal   | True  | No        |
 
-### 🔹 Implementasi Model Decision Tree
+# 🔹 Implementasi Model Decision Tree
 
 ```python
 # Membaca dataset cuaca
@@ -406,7 +406,7 @@ print(f"Akurasi Model Golf: {acc_golf:.2f}")
 
 ---
 
-## 🎯 Kesimpulan
+ 🎯 Kesimpulan
 
 - **Decision Tree** adalah algoritma powerful untuk klasifikasi data.
 - **Dataset Iris** berhasil diklasifikasikan dengan **akurasi 97%**.
@@ -414,12 +414,12 @@ print(f"Akurasi Model Golf: {acc_golf:.2f}")
 
 ---
 
-## 📌 Referensi
+ 📌 Referensi
 - [Towards Data Science - Decision Tree](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052)
 
 ---
 
-<span style="color:red">3. Perhitungan Python Naïve Bayes Classifier</span>
+### 3. Perhitungan Python Naïve Bayes Classifier
 
 ---
 
@@ -430,7 +430,7 @@ Repositori ini berisi implementasi **Naïve Bayes Classifier** menggunakan datas
 
 ---
 
-## 📖 Deskripsi Proyek
+ 📖 Deskripsi Proyek
 
 Pada proyek ini, kita akan menggunakan **Naïve Bayes Classifier** untuk **klasifikasi dataset covid19** berdasarkan fitur yang telah dikonversi ke dalam bentuk numerik. Tahapan utama dalam proyek ini meliputi:
 
@@ -443,7 +443,7 @@ Pada proyek ini, kita akan menggunakan **Naïve Bayes Classifier** untuk **klasi
 
 ---
 
-## 🚀 Instalasi
+ 🚀 Instalasi
 
 Sebelum menjalankan kode, pastikan pustaka yang dibutuhkan telah terinstal dengan menjalankan perintah berikut:
 
@@ -453,7 +453,7 @@ pip install pandas numpy scikit-learn
 
 ---
 
-## 📂 1. Import Library
+ 📂 1. Import Library
 
 ```python
 # Import library yang dibutuhkan
@@ -473,7 +473,7 @@ from sklearn import metrics
 
 ---
 
-## 📊 2. Membaca Dataset
+ 📊 2. Membaca Dataset
 
 ```python
 # Membaca dataset dari file CSV
@@ -488,7 +488,7 @@ print(df.head())
 - Jika dataset tidak ada di folder proyek, pastikan jalur lengkapnya ditentukan, misalnya: `"D:/data/studi_num.csv"`.
 - `df.head()` digunakan untuk melihat **5 data pertama**.
 
-### **Output Contoh Dataset**
+# **Output Contoh Dataset**
 ```
    JURUSAN  GENDER  ASAL_SEKOLAH  RERATA_SKS  ASISTEN  LAMA_STUDI
 0        1       1            1           1        1          1
@@ -500,7 +500,7 @@ print(df.head())
 
 ---
 
-## 📌 3. Menentukan Fitur Predictor (`X`) dan Target (`y`)
+ 📌 3. Menentukan Fitur Predictor (`X`) dan Target (`y`)
 
 ```python
 # Menentukan variabel X (fitur) dan y (label target)
@@ -514,7 +514,7 @@ y = df.iloc[:, 5].values
 
 ---
 
-## 🏗️ 4. Membagi Data: Train-Test Split
+ 🏗️ 4. Membagi Data: Train-Test Split
 
 ```python
 # Membagi dataset menjadi training (70%) dan testing (30%)
@@ -527,7 +527,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 
 ---
 
-## 🤖 5. Membangun Model Naïve Bayes
+ 🤖 5. Membangun Model Naïve Bayes
 
 ```python
 # Membuat model Naïve Bayes
@@ -543,7 +543,7 @@ model.fit(X_train, y_train)
 
 ---
 
-## 🔮 6. Prediksi Data Testing
+ 🔮 6. Prediksi Data Testing
 
 ```python
 # Melakukan prediksi pada data testing
@@ -560,9 +560,9 @@ print(y_pred)
 
 ---
 
-## 📊 7. Evaluasi Model
+ 📊 7. Evaluasi Model
 
-### 🔹 Menghitung Akurasi Model
+# 🔹 Menghitung Akurasi Model
 
 ```python
 # Menghitung akurasi model
@@ -581,7 +581,7 @@ Accuracy: 0.75
 
 ---
 
-## 🎯 Kesimpulan
+ 🎯 Kesimpulan
 
 - **Naïve Bayes** adalah algoritma powerful untuk klasifikasi data.
 - **Dataset studi mahasiswa** berhasil diklasifikasikan dengan **akurasi 75%**.
@@ -589,10 +589,10 @@ Accuracy: 0.75
 
 ---
 
-## 📌 Referensi
+ 📌 Referensi
 - [Scikit-learn Naïve Bayes Documentation](https://scikit-learn.org/stable/modules/naive_bayes.html)
 
-<span style="color:red">4. Perhitungan Python K-Means</span>
+### 4. Perhitungan Python K-Means
 
 ---
 
@@ -603,7 +603,7 @@ Repositori ini berisi implementasi **K-Means Clustering** menggunakan **dataset 
 
 ---
 
-## 📖 Deskripsi Proyek
+ 📖 Deskripsi Proyek
 
 Pada proyek ini, kita akan menggunakan **K-Means Clustering** untuk mengelompokkan data bayi berdasarkan tinggi badan (**TB**) dan berat badan (**BB**).  
 Tahapan utama dalam proyek ini meliputi:
@@ -618,7 +618,7 @@ Tahapan utama dalam proyek ini meliputi:
 
 ---
 
-## 🚀 Instalasi
+ 🚀 Instalasi
 
 Sebelum menjalankan kode, pastikan pustaka yang dibutuhkan telah terinstal dengan menjalankan perintah berikut:
 
@@ -628,7 +628,7 @@ pip install pandas numpy seaborn matplotlib scikit-learn openpyxl
 
 ---
 
-## 📂 1. Import Library
+ 📂 1. Import Library
 
 ```python
 # Import library yang dibutuhkan
@@ -650,7 +650,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 ---
 
-## 📊 2. Membaca Dataset
+ 📊 2. Membaca Dataset
 
 ```python
 # Membaca dataset dari file Excel
@@ -665,7 +665,7 @@ print(gizi.head())
 - Jika dataset tidak ada di folder proyek, pastikan jalur lengkapnya ditentukan, misalnya: `"D:/data/dataset_gizi.xlsx"`.
 - `gizi.head()` digunakan untuk melihat **5 data pertama**.
 
-### **Output Contoh Dataset**
+# **Output Contoh Dataset**
 ```
    No  Balita ke-    TB    BB
 0   1     Balita 1  52.0   5.8
@@ -677,9 +677,9 @@ print(gizi.head())
 
 ---
 
-## 🏗️ 3. Eksplorasi Data
+ 🏗️ 3. Eksplorasi Data
 
-### 🔹 Menampilkan Informasi Dataset
+# 🔹 Menampilkan Informasi Dataset
 
 ```python
 # Menampilkan informasi dataset
@@ -689,7 +689,7 @@ print(gizi.info())
 📌 **Penjelasan:**
 - `gizi.info()` digunakan untuk melihat tipe data dan jumlah nilai yang tersedia.
 
-### 🔹 Memilih Fitur yang Digunakan untuk Clustering
+# 🔹 Memilih Fitur yang Digunakan untuk Clustering
 
 ```python
 # Memilih fitur tinggi badan (TB) dan berat badan (BB)
@@ -704,7 +704,7 @@ print(gizi_x.head())
 
 ---
 
-## 📊 4. Visualisasi Data Awal
+ 📊 4. Visualisasi Data Awal
 
 ```python
 # Scatter plot untuk melihat sebaran data
@@ -717,7 +717,7 @@ plt.show()
 
 ---
 
-## 🔄 5. Normalisasi Data
+ 🔄 5. Normalisasi Data
 
 ```python
 # Normalisasi data dengan MinMaxScaler
@@ -733,7 +733,7 @@ print(x_scaled)
 
 ---
 
-## 🤖 6. Implementasi K-Means Clustering
+ 🤖 6. Implementasi K-Means Clustering
 
 ```python
 # Membuat model K-Means dengan 5 cluster
@@ -749,7 +749,7 @@ kmeans.fit(x_scaled)
 
 ---
 
-## 📊 7. Hasil Clustering
+ 📊 7. Hasil Clustering
 
 ```python
 # Menampilkan pusat cluster
@@ -766,7 +766,7 @@ print(gizi.head())
 - `kmeans.cluster_centers_` → Menampilkan koordinat pusat setiap cluster.
 - `kmeans.labels_` → Menambahkan **label cluster** ke dataset.
 
-### **Output Contoh Dataset dengan Cluster**
+# **Output Contoh Dataset dengan Cluster**
 ```
    No  Balita ke-    TB    BB  cluster
 0   1     Balita 1  52.0   5.8        0
@@ -778,7 +778,7 @@ print(gizi.head())
 
 ---
 
-## 📊 8. Visualisasi Hasil Clustering
+ 📊 8. Visualisasi Hasil Clustering
 
 ```python
 # Visualisasi hasil clustering
@@ -799,7 +799,7 @@ plt.show()
 
 ---
 
-## 🎯 Kesimpulan
+ 🎯 Kesimpulan
 
 - **Dataset gizi bayi** berhasil dikelompokkan ke dalam **5 cluster**.
 - **Centroid cluster** menunjukkan titik tengah dari setiap kelompok data.
@@ -807,10 +807,10 @@ plt.show()
 
 ---
 
-## 📌 Referensi
+ 📌 Referensi
 - [Scikit-learn K-Means Documentation](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
 
-<span style="color:red">5. Perhitungan Python Apriory</span>
+### 5. Perhitungan Python Apriory
 
 ---
 
@@ -821,7 +821,7 @@ Repositori ini berisi implementasi **algoritma Apriori** untuk melakukan **Marke
 
 ---
 
-## 📖 Deskripsi Proyek
+ 📖 Deskripsi Proyek
 
 Dalam proyek ini, kita akan menggunakan **Apriori Algorithm** untuk **menemukan pola asosiasi** antara produk yang sering dibeli bersama dalam dataset transaksi supermarket.  
 
@@ -835,7 +835,7 @@ Tahapan utama dalam proyek ini meliputi:
 
 ---
 
-## 🚀 Instalasi
+ 🚀 Instalasi
 
 Sebelum menjalankan kode, pastikan pustaka yang dibutuhkan telah terinstal dengan menjalankan perintah berikut:
 
@@ -845,7 +845,7 @@ pip install pandas numpy mlxtend
 
 ---
 
-## 📂 1. Import Library
+ 📂 1. Import Library
 
 ```python
 # Import library yang dibutuhkan
@@ -862,7 +862,7 @@ from mlxtend.frequent_patterns import apriori, association_rules
 
 ---
 
-## 📊 2. Membaca Dataset
+ 📊 2. Membaca Dataset
 
 ```python
 # Membaca dataset dari file CSV
@@ -877,7 +877,7 @@ print(df.head())
 - `names=['products']` digunakan untuk memberikan nama kolom **"products"**.
 - `df.head()` digunakan untuk melihat **5 data pertama**.
 
-### **Output Contoh Dataset**
+# **Output Contoh Dataset**
 ```
             products
 0    MILK,BREAD,BISCUIT
@@ -889,7 +889,7 @@ print(df.head())
 
 ---
 
-## 🏗️ 3. Mengonversi Data Transaksi
+ 🏗️ 3. Mengonversi Data Transaksi
 
 ```python
 # Memproses data transaksi menjadi format list
@@ -902,7 +902,7 @@ print(data)
 📌 **Penjelasan:**
 - Menggunakan `.apply(lambda x:x.split(","))` untuk **memisahkan item dalam satu transaksi**.
 
-### **Output Contoh List Transaksi**
+# **Output Contoh List Transaksi**
 ```
 [['MILK', 'BREAD', 'BISCUIT'],
  ['BREAD', 'MILK', 'BISCUIT', 'CORNFLAKES'],
@@ -913,7 +913,7 @@ print(data)
 
 ---
 
-## 🔄 4. Encoding Data dengan Transaction Encoder
+ 🔄 4. Encoding Data dengan Transaction Encoder
 
 ```python
 from mlxtend.preprocessing import TransactionEncoder
@@ -936,7 +936,7 @@ print(df_encoded.head())
 
 ---
 
-## 📊 5. Menjalankan Algoritma Apriori
+ 📊 5. Menjalankan Algoritma Apriori
 
 ```python
 # Menjalankan algoritma apriori
@@ -949,7 +949,7 @@ print(df_freq)
 📌 **Penjelasan:**
 - `min_support=0.2` → Menentukan bahwa hanya item yang muncul di **≥20% transaksi** yang akan diproses.
 
-### **Output Contoh Frequent Itemsets**
+# **Output Contoh Frequent Itemsets**
 ```
    support       itemsets
 0     0.35       (BISCUIT)
@@ -965,7 +965,7 @@ print(df_freq)
 
 ---
 
-## 📊 6. Membangun Aturan Asosiasi
+ 📊 6. Membangun Aturan Asosiasi
 
 ```python
 # Menerapkan association rules dengan confidence ≥ 0.6
@@ -979,7 +979,7 @@ print(df_ar)
 - `metric="confidence"` → Menggunakan **confidence** sebagai metrik untuk menilai aturan.
 - `min_threshold=0.6` → Hanya aturan dengan confidence **≥ 60%** yang ditampilkan.
 
-### **Output Contoh Association Rules**
+# **Output Contoh Association Rules**
 ```
   antecedents  consequents  antecedent support  consequent support  support  confidence  lift  leverage  conviction
 0     (MILK)      (BREAD)               0.25                0.35    0.20        0.80   1.23   0.075       1.15
@@ -991,7 +991,7 @@ print(df_ar)
 
 ---
 
-## 🔍 7. Analisis Hasil
+ 🔍 7. Analisis Hasil
 
 Dari hasil aturan asosiasi, dapat disimpulkan bahwa:
 
@@ -1001,7 +1001,7 @@ Dari hasil aturan asosiasi, dapat disimpulkan bahwa:
 
 ---
 
-## 🎯 Kesimpulan
+ 🎯 Kesimpulan
 
 - **Apriori Algorithm berhasil menemukan pola pembelian dalam transaksi supermarket**.
 - **BREAD dan SUGAR sering dibeli bersama, menunjukkan hubungan yang kuat**.
@@ -1009,6 +1009,6 @@ Dari hasil aturan asosiasi, dapat disimpulkan bahwa:
 
 ---
 
-## 📌 Referensi
+ 📌 Referensi
 - [Scikit-learn Apriori Documentation](https://rasbt.github.io/mlxtend/user_guide/frequent_patterns/apriori/)
  
